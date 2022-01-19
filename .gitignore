@@ -1,5 +1,10 @@
-__pycache__
-*.*~
+.env
+**/.DS_Store
+*.log
 *.pyc
-.idea
+__pycache__/
+*.py[cod]
+*$py.class
+local_settings.py
 db.sqlite3
+db.sqlite3-journal
