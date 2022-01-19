@@ -1,0 +1,160 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+        {% block content %}
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+             <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Dashboard</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+
+                            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Sales Cards  -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-success text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                                <h6 class="text-white">Relatórios</h6>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Column -->
+                </div>
+                <div class="row">
+                   <div class="col-md-6 col-lg-6 col-xlg-4">
+                    <!-- card new -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title m-b-0">Relatório de despesas</h4>
+                            </div>
+                            <ul class="list-style-none">
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                        <div class="d-flex bd-highlight mb-3">
+                                          <i class="fas fa-chart-pie fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Consumo máximo</div>
+                                          <div class="ml-auto p-2 bd-highlight">4,98 Km/L</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                           <i class="fas fa-chart-line fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Consumo máximo</div>
+                                          <div class="ml-auto p-2 bd-highlight">4,98 Km/L</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                           <i class="fas fa-chart-area fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Consumo mínimo</div>
+                                          <div class="ml-auto p-2 bd-highlight">5,5 Km/L</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                           <i class="fas fa-funnel-dollar fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Custo Total</div>
+                                          <div class="ml-auto p-2 bd-highlight">R$ 1.608,48</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                           <i class="fas fa-car fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight ml-2">Distancia Total</div>
+                                          <div class="ml-auto p-2 bd-highlight">R$ 2669 Km</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                            </ul>
+                        </div>
+                   </div>
+                    <div class="col-md-6 col-lg-6 col-xlg-4">
+                    <!-- card new -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title m-b-0">Custos</h4>
+                            </div>
+                            <ul class="list-style-none">
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                           <i class="fas fa-tachometer-alt fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Volume Total</div>
+                                          <div class="ml-auto p-2 bd-highlight">540 Litros</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                          <i class="fas fa-gas-pump fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Total Abastecimentos</div>
+                                          <div class="ml-auto p-2 bd-highlight">13</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                           <i class="fas fa-money-bill-wave fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Média Custo por Litro</div>
+                                          <div class="ml-auto p-2 bd-highlight">5,5 Km/L</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                                <li class="card-body">
+                                    <a href="#" class="m-b-0 p-0">
+                                       <div class="d-flex bd-highlight mb-3">
+                                           <i class="fas fa-money-bill-wave fa-2x w-30px m-t-5"></i>
+                                          <div class="font-bold p-2 bd-highlight">Média Custo por Kilometro</div>
+                                          <div class="ml-auto p-2 bd-highlight">R$ 0,542</div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </li>
+                            </ul>
+                        </div>
+                   </div>
+                </div>
+            </div>
+                <!-- Container fluid  -->
+        {% endblock %}

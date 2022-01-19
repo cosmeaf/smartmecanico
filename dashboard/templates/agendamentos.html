@@ -1,0 +1,110 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+        {% block content %}
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+             <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Dashboard</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+
+                            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Sales Cards  -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                        <div class="card card-hover">
+                            <div class="box bg-info text-center">
+                                <h1 class="font-light text-white"><i class="far fa-calendar-alt"></i> &nbsp; <i class="fas fa-tools"></i></h1>
+                                <h6 class="text-white">Agendar Serviços</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+
+                                <!-- ============================================================== -->
+                <!-- Start Table -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="card-title">Serviços</h2>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-sm table-striped table-bordered table-hover" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome Cliente</th>
+                                                <th>Serviços</th>
+                                                <th>Placa do Carro</th>
+                                                <th>Dia do Agendamento</th>
+                                                <th>Horário</th>
+                                                <th>Data Criação Agendamento</th>
+                                                <th>Situação</th>
+                                                <th colspan="8">Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for agenda in agendamentos %}
+                                            <tr>
+                                                <td>{{ agenda.proprietario }}</td>
+                                                <td>{{ agenda.servico }}</td>
+                                                <td>{{ agenda.placa }}</td>
+                                                <td>{{ agenda.dias_visita }}</td>
+                                                <td>{{ agenda.horarios }}</td>
+                                                <td>{% if agenda.status == "A" %}
+                                                    <span class="badge badge-info">Agendado</span>
+                                                {% endif %}
+
+                                                {% if agenda.status == "F" %}
+                                                    <span class="badge badge-success">Finalizado</span>
+                                                {% endif %}
+
+                                                {% if agenda.status == "C" %}
+                                                    <span class="badge badge-danger">Cancelado</span>
+                                                {% endif %}
+                                                </td>
+                                                <td>{{ agenda.data_criacao }}</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-success btn-sm">Editar</a>
+                                                    <a href="#" class="btn btn-danger btn-sm">Cancelar</a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Table Content -->
+                <!-- ============================================================== -->
+
+            </div>
+                <!-- Container fluid  -->
+        {% endblock %}
