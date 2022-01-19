@@ -11,13 +11,13 @@ from django.contrib.admin.views.main import ChangeList
 
 class Proposta(models.Model):
     cliente = models.ForeignKey(User, on_delete=models.CASCADE)
-    cpf = models.CharField(u'CPF', blank=True, max_length=14)
-    cnpj = models.CharField(u'CNPJ', blank=True, max_length=18)
-    endereco = models.CharField(u'Endereço', blank=True, null=True, max_length=255)
-    bairro = models.CharField(u'Bairro', blank=True, null=True, max_length=255)
-    cidade = models.CharField(u'Cidade', blank=True, null=True, max_length=255)
-    estado = models.CharField(u'Estato', blank=True, null=True, max_length=2, choices=STATE_CHOICES)
-    data = models.DateField(u'Data de Emissão')
+    cpf = models.CharField('CPF', blank=True, max_length=14)
+    cnpj = models.CharField('CNPJ', blank=True, max_length=18)
+    endereco = models.CharField('Endereço', blank=True, null=True, max_length=255)
+    bairro = models.CharField('Bairro', blank=True, null=True, max_length=255)
+    cidade = models.CharField('Cidade', blank=True, null=True, max_length=255)
+    estado = models.CharField('Estato', blank=True, null=True, max_length=2, choices=STATE_CHOICES)
+    data = models.DateField('Data de Emissão')
 
     VALIDADE_CHOICES = (
         ('Quinze', '15 (Quinze)'),
@@ -26,23 +26,23 @@ class Proposta(models.Model):
         ('Noventa', '90 (Noventa)')
     )
 
-    validade = models.CharField(u'Validade', blank=True, null=True, max_length=255, choices=VALIDADE_CHOICES)
-    valor = models.DecimalField(u'Valor', blank=True, null=True, max_digits=8, decimal_places=2)
+    validade = models.CharField('Validade', blank=True, null=True, max_length=255, choices=VALIDADE_CHOICES)
+    valor = models.DecimalField('Valor', blank=True, null=True, max_digits=8, decimal_places=2)
 
     CETEGORY_CHOICES = (
         ('Atrasado', 'Atrasado'),
         ('AVencer', 'Á Vencer'),
         ('Pago', 'Pago'),
     )
-    situacao = models.CharField(u'Situação', blank=True, null=True, max_length=255, choices=CETEGORY_CHOICES)
+    situacao = models.CharField('Situação', blank=True, null=True, max_length=255, choices=CETEGORY_CHOICES)
     pago = models.BooleanField(default=False)
 
-    dominio = models.CharField(u'Dominio do Site', blank=True, null=True, max_length=255,
+    dominio = models.CharField('Dominio do Site', blank=True, null=True, max_length=255,
                                help_text='URL - exe: seudomiio.com.br')
-    dominio_login = models.CharField(u'Acesso ao Admin', blank=True, null=True, max_length=255,
+    dominio_login = models.CharField('Acesso ao Admin', blank=True, null=True, max_length=255,
                                      help_text='URL - exe: seudomino.com.br/admin')
-    login = models.CharField(u'Login', blank=True, null=True, max_length=20)
-    senha = models.CharField(u'Senha', blank=True, null=True, max_length=20)
+    login = models.CharField('Login', blank=True, null=True, max_length=20)
+    senha = models.CharField('Senha', blank=True, null=True, max_length=20)
 
     @property
     def imprimir(self):
